@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int number, a;
+  bool Prime = true;
+
+  cout << "Please enter an integer "<<endl;
+  cin >> number;
+
+  for(a = 2; a <= number / 2; ++a)
+  {
+      if(number % a == 0)
+      {
+          Prime = false;
+          break;
+
+      }
+  }
+  if (Prime)
+      cout << "The number entered is a prime number";
+  else
+      cout << "The number entered is not a prime number";
+
+  return 0;
+}
